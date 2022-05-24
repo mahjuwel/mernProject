@@ -4,7 +4,8 @@ const DataSchema=mongoose.Schema({
     username:{type:String,unique:true},
     email:{type:String,unique:true},
     role:{type:String},
-    password:{type:String},  
+    password:{type:String},
+    photo: {type:String},  
 },{versionKey:false});
 const AppUserModel=mongoose.model('AppUser',DataSchema);
 module.exports=AppUserModel

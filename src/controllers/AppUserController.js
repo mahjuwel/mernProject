@@ -2,9 +2,11 @@ const AppUserModel = require("../models/AppUserModel");
 var jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
+
 exports.CreateAppUser=(req,res)=>{
     let reqBody=req.body;
-    AppUserModel.create(reqBody,(err,data)=>{
+    console.log(req.body.email);
+      AppUserModel.create(reqBody, (err,data)=>{
         if(err){
             res.status(400).json({status:"fail",data:err})
         }
